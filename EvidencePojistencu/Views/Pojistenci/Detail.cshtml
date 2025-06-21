@@ -1,0 +1,28 @@
+﻿@model EvidencePojistencu.Models.Pojistenec
+
+@{
+    ViewData["Title"] = "Detail pojištěnce";
+}
+
+@if (Model == null)
+{
+    <div class="alert alert-warning text-center mt-4">
+        Pojištěnec nebyl nalezen.
+    </div>
+}
+else
+{
+    <div class="container mt-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title mb-4">Pojištěnec nalezen</h3>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Jméno:</strong> @Model.Jmeno</li>
+                    <li class="list-group-item"><strong>Příjmení:</strong> @Model.Prijmeni</li>
+                    <li class="list-group-item"><strong>Věk:</strong> @Model.Vek</li>
+                    <li class="list-group-item"><strong>Telefon:</strong> @Model.Telefon</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+}

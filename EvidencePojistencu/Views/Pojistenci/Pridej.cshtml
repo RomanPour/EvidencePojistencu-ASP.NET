@@ -1,0 +1,47 @@
+﻿@model EvidencePojistencu.Models.Pojistenec
+
+@{
+    ViewData["Title"] = "Přidat pojištěnce";
+}
+
+<h2 class="mb-4 text-center">Přidat pojištěnce</h2>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form asp-action="Pridej" method="post" class="card p-4 shadow">
+            <div class="form-group mb-3">
+                <label asp-for="Jmeno"></label>
+                <input asp-for="Jmeno" class="form-control" />
+                <span asp-validation-for="Jmeno" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Prijmeni"></label>
+                <input asp-for="Prijmeni" class="form-control" />
+                <span asp-validation-for="Prijmeni" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Vek"></label>
+                <input asp-for="Vek" class="form-control" />
+                <span asp-validation-for="Vek" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-4">
+                <label asp-for="Telefon"></label>
+                <input asp-for="Telefon" class="form-control" />
+                <span asp-validation-for="Telefon" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">
+                <i class="bi bi-check-circle"></i> Uložit
+            </button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

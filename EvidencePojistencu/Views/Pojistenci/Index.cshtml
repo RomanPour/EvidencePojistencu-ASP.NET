@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Menu";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-body text-center">
+                    <h2 class="card-title mb-4">Evidence pojištěnců</h2>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a asp-action="Pridej" class="btn btn-outline-primary btn-lg d-flex align-items-center gap-2">
+                            <i class="bi bi-person-plus"></i> Přidat pojištěnce
+                        </a>
+                        <a asp-action="Vypis" class="btn btn-outline-success btn-lg d-flex align-items-center gap-2">
+                            <i class="bi bi-card-list"></i> Vypsat všechny
+                        </a>
+                        <a asp-action="Najdi" class="btn btn-outline-info btn-lg d-flex align-items-center gap-2">
+                            <i class="bi bi-search"></i> Vyhledat pojištěnce
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
